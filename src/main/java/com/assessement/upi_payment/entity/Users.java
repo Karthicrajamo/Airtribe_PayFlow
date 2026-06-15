@@ -8,7 +8,7 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
 
     private String name;
 
@@ -17,14 +17,14 @@ public class Users {
 
     private Long phoneNumber;
 
-    private Long balance;
+    private Double balance;
 
     public Long getId() {
-        return id;
+        return userId;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.userId = id;
     }
 
     public String getName() {
@@ -51,11 +51,11 @@ public class Users {
         this.phoneNumber = phoneNumber;
     }
 
-    public Long getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
-    public void setBalance(Long balance) {
+    public void setBalance(Double balance) {
         this.balance = balance;
     }
 }

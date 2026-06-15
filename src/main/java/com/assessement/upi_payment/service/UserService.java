@@ -30,10 +30,14 @@ public class UserService {
     }
 
     public Users getUserById(Long id) throws UserNotFoundException{
-        return userRepository.findById(id).orElseThrow(()->new UserNotFoundException("User not found with this UPI ID"));
+        return userRepository.findById(id).orElseThrow(()->new UserNotFoundException("User not found with this ID"));
     }
 
     public Users findByUpiId(String upiId) throws RuntimeException{
         return userRepository.findByUpiId(upiId).orElseThrow(()-> new RuntimeException("User not found with this UPI ID"));
+    }
+
+    public List<Users> findUsersBalanceGreaterThan(Double balance){
+        return userRepository.findUsersBalanceGreaterThan(balance);
     }
 }

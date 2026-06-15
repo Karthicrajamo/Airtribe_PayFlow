@@ -12,7 +12,7 @@ public class Transaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long TransactionId;
 
     private String senderUpiId;
 
@@ -21,6 +21,22 @@ public class Transaction {
     private Double amount;
 
     private LocalDateTime transactionTime;
+
+    public Long getTransactionId() {
+        return TransactionId;
+    }
+
+    public void setTransactionId(Long transactionId) {
+        TransactionId = transactionId;
+    }
+
+    public String getReceiverUpiId() {
+        return receiverUpiId;
+    }
+
+    public void setReceiverUpiId(String receiverUpiId) {
+        this.receiverUpiId = receiverUpiId;
+    }
 
     public String getSenderUpiId() {
         return senderUpiId;
