@@ -39,7 +39,7 @@ public class UserController {
         return userService.findByUpiId(upiId);
     }
 
-    @GetMapping("/")
+
 
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<Map<String,String>> handleUserNotFoundException(UserNotFoundException ex){
